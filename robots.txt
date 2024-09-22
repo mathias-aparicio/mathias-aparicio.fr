@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+Allow: /
+Sitemap: https://mathias-aparicio.github.io/mathias-aparicio.fr/sitemap.xml

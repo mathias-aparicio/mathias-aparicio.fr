@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>https://mathias-aparicio.github.io/mathias-aparicio.fr/</loc>
+    </url>
+    <url>
+        <loc>https://mathias-aparicio.github.io/mathias-aparicio.fr/about/</loc>
+    </url>
+    <url>
+        <loc>https://mathias-aparicio.github.io/mathias-aparicio.fr/posts/</loc>
+    </url>
+    <url>
+        <loc>https://mathias-aparicio.github.io/mathias-aparicio.fr/posts/tailwind-deno/</loc>
+        <lastmod>2024-09-22</lastmod>
+    </url>
+    <url>
+        <loc>https://mathias-aparicio.github.io/mathias-aparicio.fr/projects/</loc>
+    </url>
+    <url>
+        <loc>https://mathias-aparicio.github.io/mathias-aparicio.fr/projects/nemesis/</loc>
+    </url>
+    <url>
+        <loc>https://mathias-aparicio.github.io/mathias-aparicio.fr/tags/</loc>
+    </url>
+    <url>
+        <loc>https://mathias-aparicio.github.io/mathias-aparicio.fr/tags/deno/</loc>
+    </url>
+    <url>
+        <loc>https://mathias-aparicio.github.io/mathias-aparicio.fr/tags/tailwind/</loc>
+    </url>
+</urlset>
