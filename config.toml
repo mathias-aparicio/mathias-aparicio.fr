@@ -1,0 +1,31 @@
+base_url = "example.com"
+title = "mathias-aparicio"
+build_search_index = true
+generate_feeds = true
+minify_html = true
+
+theme = "apollo"
+taxonomies = [{ name = "tags" }]
+
+[markdown]
+highlight_code = true
+highlight_theme = "ayu-light"
+
+[extra]
+use_cdn = false
+theme = "toggle"
+
+menu = [
+    { name = "/posts", url = "/posts", weight = 1 },
+    { name = "/projects", url = "/projects", weight = 3 },
+    { name = "/about", url = "/about", weight = 5 },
+]
+
+socials = [
+    { name = "github", url = "https://github.com/mathias-aparicio", icon = "github" },
+    {name="linkedin", url = "https://linkedin.com/in/mathias-aparicio/", icon = "linkedin"  }
+]
+
+[extra.analytics]
+enabled = true
+
