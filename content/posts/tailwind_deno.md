@@ -5,9 +5,9 @@ date = "2024-09-22"
 [taxonomies]
 tags=["deno", "tailwind"]
 +++
-# Prologue
+## Prologue
 
-I was working in a project that used [deno](https://deno.com/) as javascript runtime alongside [fresh](https://fresh.deno.dev/) as web framework. And I couldn't find easly how to import a front.
+I was working in a project that used [deno](https://deno.com/) as javascript runtime alongside [fresh](https://fresh.deno.dev/) as web framework. And I couldn't find easly how to import a front. Here I would like to tell you how I managed to add the font.
 
 ## Prerequisites
 This post assumes you are working on a fresh project and use Tailwind CSS for styling library. 
@@ -18,11 +18,11 @@ To choose your font you can go to [Google Fonts](https://fonts.google.com) and s
 ### 2. Get the Embed Code
 
 Once you have chosen your font:
-- Click on the font.
-- Hit the `Get font` then `Get embed code` button
-- Navigate to the "Get embed code" section
-- Select `@import`.
-- Copy the `@import url('https::/fonts/googleapis.com ... display=swap');` code  snippets
+- Click on the font;
+- Hit the `Get font` then `Get embed code` button;
+- Navigate to the "Get embed code" section;
+- Select `@import`;
+- Copy the `@import url('https::/fonts/googleapis.com ... display=swap');` code  snippets.
 
 ### 3. Edit tailwind configuration
 

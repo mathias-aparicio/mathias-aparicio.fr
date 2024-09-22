@@ -23,7 +23,7 @@ menu = [
 
 socials = [
     { name = "github", url = "https://github.com/mathias-aparicio", icon = "github" },
-    {name="linkedin", url = "https://linkedin.com/in/mathias-aparicio/", icon = "linkedin"  }
+    { name="linkedin", url = "https://linkedin.com/in/mathias-aparicio/", icon = "linkedin" }
 ]
 
 [extra.analytics]
