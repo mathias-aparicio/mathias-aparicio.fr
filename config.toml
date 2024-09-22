@@ -1,4 +1,4 @@
-base_url = "example.com"
+base_url = "https://mathias-aparicio.github.io/mathias-aparicio.fr/"
 title = "mathias-aparicio"
 build_search_index = true
 generate_feeds = true
