@@ -1,0 +1,10 @@
+- [ ] About page
+  - [ ] Resume : Academy, work
+  - [ ] En, Fr, Jp
+  - [ ] Projects
+- [ ] Navbar
+  - [ ] Socials LinkedIn, GitHub,
+  - [ ] About, blog
+- [ ] Tags for blog
+- [ ] Custom code highlight them that fits the color palette
+- [ ] Note block

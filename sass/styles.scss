@@ -1,0 +1,140 @@
+@import "colors";
+// -- Fonts --
+$font-body: "Spline Sans", sans-serif;
+$font-mono: "Spline Sans Mono", monospace;
+
+// --- Navigation  ---
+nav {
+  display: flex;
+  gap: 1em;
+  padding: 1em 0;
+}
+
+nav > li {
+  list-style: none;
+}
+
+li > a {
+  text-decoration: none;
+  color: inherit;
+  padding: 0.5em 1em;
+  border-radius: 4px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+li > a:hover {
+  background-color: $code-background;
+}
+
+// General
+body {
+  background-color: $background;
+  color: $text;
+  font-family: $font-body;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $heading;
+}
+
+strong {
+  color: $strong;
+}
+
+a {
+  text-decoration: none;
+  color: $link;
+}
+
+// Syntax highlighting
+pre {
+  width: fit-content;
+  background-color: $code-background;
+  border: 1px solid $code-border;
+  padding: 1em;
+  border-radius: 4px;
+  overflow-x: auto;
+}
+
+code {
+  font-family: $font-mono;
+}
+
+code:not([data-lang]) {
+  background-color: $code;
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+}
+
+// -- Resume Page --
+section h3 {
+  border-bottom: 2px solid $heading;
+  padding-bottom: 0.5em;
+  margin-top: 3em;
+  margin-bottom: 2em;
+}
+
+section h4 {
+    color: $text;
+}
+
+// Timeline for Experience and Education
+section h3:first-of-type + h4,
+section h3:nth-of-type(2) + h4 {
+  position: relative;
+  margin-left: 2em;
+}
+
+section h4:before {
+  content: '';
+  background-color: $heading;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  position: absolute;
+  left: -2.5em;
+  top: 0.35em;
+  border: 2px solid $background;
+}
+
+section h4 + p {
+  margin-left: 2em;
+  font-style: italic;
+  color: #666;
+}
+
+section h4 + p + ul {
+  margin-left: 2em;
+  border-left: 2px solid $code-border;
+  padding-left: 2em;
+  list-style-type: circle;
+}
+
+// Cards for Skills and Projects
+section h3:nth-of-type(3) + ul,
+section h3:nth-of-type(4) + ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1em;
+    list-style: none;
+    padding: 0;
+}
+
+section h3:nth-of-type(3) + ul li,
+section h3:nth-of-type(4) + ul li {
+    background-color: $code-background;
+    padding: 1em;
+    border-radius: 4px;
+    border: 1px solid $code-border;
+}
+
