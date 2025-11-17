@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+
+        <!-- Include Spline Sans and Spline Sans Mono -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@400;700&family=Spline+Sans+Mono:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+
+        <!-- Include SCSS stylesheet -->
+        <link rel="stylesheet" href="styles.css">
+
+        <!-- Include Font Awesome 7.1.0  -->
+        <link rel="stylesheet"
+              href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css">
+
+        <title>Mathias Blog</title>
+    </head>
+    <body>
+        <nav>
+            <li>
+                <a href="/">
+                    <i class="fa-regular fa-house"></i>
+                    About
+                </a>
+            </li>
+            <li>
+                <a href="/blog">
+                    <i class="fa-regular fa-pen-to-square"></i>
+                    Blog
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/mathias-aparicio">
+                    <i class="fa-brands fa-github"></i>
+                    Github
+                </a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/in/mathias-aparicio/?originalSubdomain=fr">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                    Linkedin
+                </a>
+            </li>
+        </nav>
+        <section class="section">
+            <div class="container">
+                
+    <h1 class="title">Import custom fonts with Tailwind CSS fresh</h1>
+    <p class="subtitle">
+        <strong>2024-09-22</strong>
+    </p>
+    <h2 id="prologue">Prologue</h2>
+<p>I was working in a project that used <a href="https://deno.com/">deno</a> as javascript runtime alongside <a href="https://fresh.deno.dev/">fresh</a> as web framework. And I couldn't find easly how to import a front. Here I would like to tell you how I managed to add the font.</p>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>This post assumes you are working on a fresh project and use Tailwind CSS for styling library.</p>
+<h3 id="1-find-your-font">1. Find Your Font</h3>
+<p>To choose your font you can go to <a href="https://fonts.google.com">Google Fonts</a> and search the one you want, for the sake of this tutorial we will be looking for the <a href="https://fonts.google.com/?query=fredoka">Fredoka</a> font.</p>
+<h3 id="2-get-the-embed-code">2. Get the Embed Code</h3>
+<p>Once you have chosen your font:</p>
+<ul>
+<li>Click on the font;</li>
+<li>Hit the <code>Get font</code> then <code>Get embed code</code> button;</li>
+<li>Navigate to the &quot;Get embed code&quot; section;</li>
+<li>Select <code>@import</code>;</li>
+<li>Copy the <code>@import url('https::/fonts/googleapis.com ... display=swap');</code> code snippets.</li>
+</ul>
+<h3 id="3-edit-tailwind-configuration">3. Edit tailwind configuration</h3>
+<p>Open your <code>tailwind.config.ts</code> file and add the following:</p>
+<pre data-lang="typescript" style="background-color:#fcf0ca;color:#282828aa;" class="language-typescript "><code class="language-typescript" data-lang="typescript"><span style="color:#9d0006;">import </span><span>{ </span><span style="color:#282828;">type Config </span><span>} </span><span style="color:#9d0006;">from </span><span style="color:#79740e;">&quot;tailwindcss&quot;</span><span>;
+</span><span>
+</span><span style="color:#9d0006;">export default </span><span>{
+</span><span>  content: [</span><span style="color:#79740e;">&quot;{routes,islands,components}/**/*.{ts,tsx}&quot;</span><span>],
+</span><span>  theme: {
+</span><span>    extend: {
+</span><span>      fontFamily: {
+</span><span>        fredoka: [</span><span style="color:#79740e;">&#39;&quot;Fredoka&quot;&#39;</span><span>, </span><span style="color:#79740e;">&quot;sans-serif&quot;</span><span>],
+</span><span>      },
+</span><span>    },
+</span><span>  },
+</span><span>  plugins: [],
+</span><span>} </span><span style="color:#282828;">satisfies Config</span><span>;
+</span></code></pre>
+<h3 id="4-import-the-font">4. Import the Font</h3>
+<p>Finally, open your <code>styles.css</code> file and add the following line:</p>
+<pre data-lang="css" style="background-color:#fcf0ca;color:#282828aa;" class="language-css "><code class="language-css" data-lang="css"><span style="color:#9d0006;">@import </span><span style="color:#b57614;">url</span><span style="color:#282828;">(</span><span style="color:#79740e;">&quot;https://fonts.googleapis.com/css2?family=Fredoka&amp;display=swap&quot;</span><span style="color:#282828;">)</span><span>;
+</span></code></pre>
+<h2 id="conclusion">Conclusion</h2>
+<p>You now can add your font to you tsx 🚀!</p>
+
+
+            </div>
+        </section>
+    </body>
+</html>

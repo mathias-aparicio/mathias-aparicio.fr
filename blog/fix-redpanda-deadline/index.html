@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+
+        <!-- Include Spline Sans and Spline Sans Mono -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@400;700&family=Spline+Sans+Mono:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+
+        <!-- Include SCSS stylesheet -->
+        <link rel="stylesheet" href="styles.css">
+
+        <!-- Include Font Awesome 7.1.0  -->
+        <link rel="stylesheet"
+              href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css">
+
+        <title>Mathias Blog</title>
+    </head>
+    <body>
+        <nav>
+            <li>
+                <a href="/">
+                    <i class="fa-regular fa-house"></i>
+                    About
+                </a>
+            </li>
+            <li>
+                <a href="/blog">
+                    <i class="fa-regular fa-pen-to-square"></i>
+                    Blog
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/mathias-aparicio">
+                    <i class="fa-brands fa-github"></i>
+                    Github
+                </a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/in/mathias-aparicio/?originalSubdomain=fr">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                    Linkedin
+                </a>
+            </li>
+        </nav>
+        <section class="section">
+            <div class="container">
+                
+    <h1 class="title">Can not start redpanda cluster because of deadline</h1>
+    <p class="subtitle">
+        <strong>2025-11-17</strong>
+    </p>
+    <p>As I was trying to learn how to use redpanda.
+I could not create a cluster with <code>rpk container start</code>. I got the timeout described in the following code block.</p>
+<pre data-lang="bash" style="background-color:#fcf0ca;color:#282828aa;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#282828;">rpk container start -n 1
+</span><span style="color:#282828;">Checking for a local image...
+</span><span style="color:#282828;">Version </span><span style="color:#79740e;">&quot;redpandadata/redpanda:v25.2.10&quot;</span><span style="color:#282828;"> not found locally
+</span><span style="color:#282828;">Pulling image: redpandadata/redpanda:v25.2.10
+</span><span style="color:#282828;">unable to start cluster: unable to check Redpanda image: could not pull image: context deadline exceeded
+</span></code></pre>
+<p>To solve this issue, first pull the image with</p>
+<p>You might want to match the version with the code block above.</p>
+<pre data-lang="bash" style="background-color:#fcf0ca;color:#282828aa;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#282828;">docker pull redpandadata/redpanda:v25.2.10
+</span></code></pre>
+<p>Then retry the container start command.</p>
+<p>Hope this help in your learning redpanda journey.</p>
+
+
+            </div>
+        </section>
+    </body>
+</html>
